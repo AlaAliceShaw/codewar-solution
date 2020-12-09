@@ -1,0 +1,13 @@
+Yor task is to write function factorial
+
+solution:
+
+function factorial(n){
+  let mult = 1;
+  let x = 1;
+  while( x <= n){
+    mult = mult * x;
+    x++;
+  }
+  return mult;
+}

@@ -1,0 +1,19 @@
+
+
+solution:
+big, goal) {
+let BIG_WEIGTH = 5
+let SMALL_WEIGTH = 2
+let result=-1
+for (let i=big; i>=0; i--)
+  {
+    let bigsWeigth=i*BIG_WEIGTH;
+    let reminderWeigth = goal - bigsWeigth;
+    if( bigsWeigth<=goal && reminderWeigth % SMALL_WEIGTH ===0 && reminderWeigth/SMALL_WEIGTH<=small)
+      {
+        result= reminderWeigth/SMALL_WEIGTH;
+        break;
+      }
+  }
+return result;
+}

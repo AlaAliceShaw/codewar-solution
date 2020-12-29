@@ -1,0 +1,18 @@
+Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+solution 1:
+
+function invert(array) {
+   let newArr =[];
+  for(let i = 0; i < array.length; i ++){
+    newArr.push(array[i]* (-1));
+  }
+  return newArr;
+}
+
+
+
+solution 2: 
+function invert(array){
+ return array.map(x => x ===0 ? x : -x);
+ }

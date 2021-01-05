@@ -1,0 +1,22 @@
+
+Task
+Coding in function cutCube. function accept 2 parameter: volume and n. volume is the volume of a cube. 
+If we cut the cube into n block. please determine whether the length of the cube is an integer. return true or false.
+
+For exmaple:
+
+volume=27, it can be divided into 27 blocks, each small cube side length is 1
+
+cutCube(27,27) should return true
+
+solution:
+
+
+function cutCube(volume,n){
+ let a = Math.cbrt(volume / n);
+  let b = Math.cbrt(n);
+  if(a%1 === 0 && b%1 === 0){
+    return true;
+  }
+  return false;
+}

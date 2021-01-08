@@ -1,0 +1,16 @@
+
+Create a function called toTime() that takes an integer argument of seconds and converts
+the value into a string describing how many hours and minutes comprise that many seconds.
+Any remaining seconds left over are ignored.
+Note:
+The string output needs to be in the specific form - "X hour(s) and X minute(s)"
+solution:
+
+
+
+function toTime(seconds) {
+    let hour = Math.floor(seconds / 3600);
+    let minute = Math.floor((seconds - (hour * 3600)) / 60);
+
+    return `${hour} hour(s) and ${minute} minute(s)`;
+}

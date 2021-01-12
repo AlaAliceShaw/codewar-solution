@@ -1,0 +1,45 @@
+The function takes cents value (int) and needs to return the minimum number of coins combination of the same value.
+The function should return an array where
+coins[0] = pennies ==> $00.01
+coins[1] = nickels ==> $00.05
+coins[2] = dimes ==> $00.10
+coins[3] = quarters ==> $00.25
+So for example:
+coinCombo(6) --> [1, 1, 0, 0]
+
+solution 1:
+
+const coinCombo = (cents) => {
+let arrDone = [0,0,0,0];
+  while(cents>=25){
+    arrDone[3]++
+    cents-=25
+  }
+  while(cents>=10){
+    arrDone[2]++
+    cents-=10
+  }
+  while(cents>=5){
+    arrDone[1]++
+    cents-=5
+  }
+  while(cents>=1){
+    arrDone[0]++
+    cents-=1
+  }
+  return arrDone
+}
+
+
+solution 2:
+
+function coinCombo(cents) {
+    let coins = [1,5,10,25];
+    let combo = [0,0,0,0];
+    for (let i = 3; i >= 0; i--) {
+        combo[i] = Math.floor(cents / coins[i]);
+        cents -= combo[i] * coins[i];
+    }
+    return combo;
+}
+console.log(coinCombo(11));

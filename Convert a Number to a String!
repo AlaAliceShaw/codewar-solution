@@ -1,0 +1,8 @@
+
+conver number to string
+
+solution:
+
+function numberToString(num) {
+  return String(num);
+}

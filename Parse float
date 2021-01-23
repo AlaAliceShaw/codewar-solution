@@ -1,0 +1,19 @@
+
+
+
+solution 1 :
+
+function parseF(s) {
+  let a = parseFloat(s);
+    if(a !== parseFloat(a) )
+    return null;
+  else 
+    return a;
+}
+
+
+solution 2:
+
+function parseF(s) {
+  return isNaN(parseFloat(s)) ? null : parseFloat(s);
+}

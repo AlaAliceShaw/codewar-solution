@@ -1,0 +1,12 @@
+Write a function which calculates the average of the numbers in a given list.
+
+solution:
+
+function find_average(arr) {
+  let sum = 0;
+  for(let el of arr){
+    sum += el;
+  }
+
+   return (sum / arr.length);
+}

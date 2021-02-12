@@ -1,0 +1,26 @@
+
+
+
+solution 1:
+
+var gimme = function (arr) {
+  let clonedArr = arr.slice(0);
+  clonedArr.sort(function(a, b){
+    return a-b
+  });
+  return arr.indexOf(clonedArr[1]);
+};
+
+solution 2;
+
+var gimme = function (arr) {
+  let index = 0;
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] !== max && arr[i] !== min){        
+        index = i;
+      }
+    }
+  return index;
+}

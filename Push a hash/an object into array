@@ -1,0 +1,11 @@
+You are trying to put a hash in ruby or an object in javascript or java into an array, but it always returns error,
+solve it and keep it as simple as possible!
+
+solution 1:
+
+items = [];
+items.push ({a: "b", c: "d"});
+
+solution 2:
+
+let items = [{a:"b", c:"d"}];

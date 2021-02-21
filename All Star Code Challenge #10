@@ -1,0 +1,22 @@
+This Kata is intended as a small challenge for my students
+Create a function named fibonacci() that takes a number argument, N, and gets the Nth number in a fibonacci sequence.
+The fibonacci sequence is created by adding the previous 2 numbers together to form the next number
+in the sequence https://en.wikipedia.org/wiki/Fibonacci_number
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...
+
+solution:
+function  fibonacci(n){
+  if(n==0) return 0;
+    if(n == 1) return 1;
+        let num1 = 0;
+        let  num2 = 1;
+        let sum;
+        let i = 1;
+          while (i<n){
+            sum = num1 + num2;
+            num1 = num2;
+            num2 = sum;
+            i+=1;
+         }
+        return num2;
+}

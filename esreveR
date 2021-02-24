@@ -1,0 +1,23 @@
+reverce ARRAY
+
+solution 1:
+reverse = function(array) {
+  let reversedNum = [];
+    for(let i =  array.length -1; i >= 0; i--) {
+    reversedNum.push(array[i]);
+    }
+  return reversedNum;
+ }
+ 
+ solution 2:
+ reverse = function(array) {
+  let reversedNum = [];
+  array.map((val) => {
+    reversedNum.unshift(val);
+});  
+  return  reversedNum;
+  }
+  
+  
+  
+       

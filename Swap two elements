@@ -1,0 +1,31 @@
+Return a new array that contains exactly the same elements as the input array, but with elements a and b swapped.
+If the array has multiple copies of a, swap only the first one that appears in the array.
+If the array has multiple copies of b, swap only the last one that appears in the array.
+For example:
+([1, 2, 3, 4], 2, 4) -> [1, 4, 3, 2]
+([1, 2, 3, 4, 1, 2, 3, 4], 2, 4) -> [1, 4, 3, 4, 1,
+
+solution 1:
+
+function swapTwo(array, a, b) {
+  let arr = array.slice();
+  let index1 = array.indexOf(a);
+  let index2 = array.lastIndexOf(b);
+  arr[index1] = b;
+  arr[index2] = a;
+  return arr;
+}
+
+
+solution 2:
+
+function swapTwo(arr, a, b) {
+  let newarr = []
+    for (let i = 0; i < arr.length; i++) {
+      if (i === arr.indexOf(a)) newarr.push(b);
+      else if (i === arr.lastIndexOf(b)) newarr.push(a);
+      else newarr.push(arr[i])
+     }
+return newarr;
+}
+

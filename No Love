@@ -1,0 +1,25 @@
+That naughty cat of yours has been scrambling all over your keyboard. Funnily enough, it somehow managed to type some numbers in. 
+In your rush to push it away, you noticed that you had 69s all over your arrays! Remember,
+if there are certain numbers in a string, they should remain in the array Quick, filter them out before the big boss man finds out.
+
+solution  1:
+
+var noLove = function (arr) {
+  arr = arr.filter(el=> el!==69);
+  return arr;
+  }
+  
+solution 2 (loop)
+
+
+
+  var noLove = function (arr) {
+  let badCat = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!(arr[i] === 69) && !(arr[i] === undefined)) {
+      basCat.push(arr[i]);
+    }
+  }
+  return badCat;
+}
+

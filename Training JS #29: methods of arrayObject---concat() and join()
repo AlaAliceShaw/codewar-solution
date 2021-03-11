@@ -1,0 +1,35 @@
+This lesson we learn two methods of array: concat() and join(). 
+We have seen concat() in the stringObject method, but the method of the arrayObject is different from the stringObject method,
+so we need to learn again. When studying the stringObject method split(), we have simply learned the join() method. 
+This time we will review and explain it in detail.
+Their definitions and syntax please refer to:
+Array.prototype.concat()
+Array.prototype.join()
+(Please forgive me for my laziness;-)
+Here are some examples to help us understand the use of concat() and join():
+We first learn the concat() method, which can add some elements to the end of the array. concat() can have more and more parameters,
+and the parameter can be values, array or otherthings. Look this example:
+
+
+solution 1:
+
+function bigToSmall(arr){
+ let result=[].concat(...arr).sort((a,b) => b - a).join('>');
+  return result;
+}
+
+
+solution 2: (use loops)
+
+function bigToSmall(arr){
+ let array = [];
+   for (let i = 0; i <arr.length; i++) {
+     for (let j = 0; j < arr[i].length; j++) {
+     array.push(arr[i][j])
+     }
+   }
+
+   array = array.sort((a,b) => b-a).join('>')
+   return array;
+}
+  

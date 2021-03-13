@@ -1,0 +1,28 @@
+Explanation:
+The minimum sum obtained from summing each two integers product , 5*2 + 3*4 = 22
+
+solution 1: (length/2)
+
+function minSum(arr) {
+ let sorted = arr.sort((a, b)=> a - b);
+ let sum = 0;
+   for (let i = 0; i < arr.length/2; i++){
+    sum += sorted[i] * sorted[sorted.length-1-i];
+   }
+ return sum;
+}
+
+solution 2: (loop)
+
+function minSum(arr) {
+  let a = arr.sort((a,b)=>b-a);
+  let sum = 0;
+  let left = 0; 
+  let right = a.length - 1;
+    for(left; left < right; left ++){
+      sum += a[left]*a[right];
+      right--;
+    }
+  return sum;
+}
+

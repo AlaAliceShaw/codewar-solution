@@ -1,0 +1,27 @@
+Your task is to sum the differences between consecutive pairs in the array in descending order.
+For example:
+sumOfDifferences([2, 1, 10])
+Returns 9
+Descending order: [10, 2, 1]
+Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+solution 1:
+
+function sumOfDifferences(arr) {
+    if (arr.length > 1 ) {
+    return Math.abs(Math.min(...arr) - Math.max(...arr));
+    } else {
+    return 0;
+    }
+}
+
+solution 2: (loop)
+
+function sumOfDifferences(arr) {
+  arr.sort((a, b) => a - b);
+    let b = 0;
+      for(let a = arr.length - 1; a > 0; a--) {
+      b += arr[a] - arr[a - 1];
+      }
+  return b;
+}

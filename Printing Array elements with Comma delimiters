@@ -1,0 +1,22 @@
+Input: Array of elements
+["h","o","l","a"]
+Output: String with comma delimited elements of the array in th same order.
+"h,o,l,a"
+
+
+
+solution:
+
+function printArray(array){
+  return array.join(',');
+}
+
+
+solution 2:  loop
+function printArray(array){
+  let comma = "";
+    for (let i = 0; i <= array.length - 1; i++) {
+      comma = comma + array[i] + ",";
+    }
+return comma.slice(0, -1);
+}

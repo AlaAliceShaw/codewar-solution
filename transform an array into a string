@@ -1,0 +1,20 @@
+A simple kata, my first.
+simply tranform an array into a string, like so:
+
+  transform([4, -56, true, "box"]) => "4-56truebox"
+  
+  
+solution 1:
+
+function transform(array) {
+  return array.map(String).join('');
+}
+
+solution 2; loop
+function transform(array) {
+  let res = '';
+  for (let i = 0; i < array.length; i += 1) {
+    res += array[i];
+  }
+  return res;
+}

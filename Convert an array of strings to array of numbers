@@ -1,0 +1,22 @@
+Oh no!
+Some really funny web dev gave you a sequence of numbers from his API response as an sequence of strings!
+you need to cast the whole array to the correct type.
+Create the function that takes as a parameter a sequence of numbers represented as strings and outputs a sequence of numbers.
+ie:["1", "2", "3"] to [1, 2, 3]
+
+
+solution 1:
+
+function toNumberArray(stringarray){
+  return stringarray.map(Number);
+}
+
+solution 2:  loop
+
+function toNumberArray(stringarray){
+  let arr = [];
+  for(let i = 0; i < stringarray.length; i++){
+    arr.push(+stringarray[i]);
+  }
+  return arr;
+}

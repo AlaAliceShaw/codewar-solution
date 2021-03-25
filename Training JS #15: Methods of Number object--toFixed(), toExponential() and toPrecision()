@@ -1,0 +1,24 @@
+
+Task
+Coding in function howManySmaller, function accept 2 parameter:arr and n. arr is a decimal array. n is a decimal.
+The first mission: let all elements in the array keep two decimal places(No need to convert number n).
+The second mission: Traversal arr, count the number of the element which smaller than n and return it.
+
+solution 1:
+
+function howManySmaller(arr,n){
+  return arr.filter( el => el.toFixed(2)<n).length;
+}
+
+solution 2:  loop
+
+function howManySmaller(arr,n){
+let total = 0;
+  for (i = 0; i < arr.length; i++){
+    if (arr[i].toFixed(2) < n)
+    total++;
+    }
+  return total;
+}
+ 
+ 

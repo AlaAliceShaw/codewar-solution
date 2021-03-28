@@ -1,0 +1,24 @@
+Create a method take that accepts a list/array and a number n, and returns a list/array array of the first n elements from the list/array.
+
+solution 1:
+
+function take(arr, n) {
+  return arr.slice(0,n);
+}
+
+solution: 2 loop
+
+function take(arr, n) { 
+  if(arr.length === 0) {
+  return [];
+  }
+    if(arr.length < n) {
+    return arr;
+    }
+let array = []
+  for(let i = 0; i < n; i++) {
+    array.push(arr[i]);
+  }
+   return array;
+}
+

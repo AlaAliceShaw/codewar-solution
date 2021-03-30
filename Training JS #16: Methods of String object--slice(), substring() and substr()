@@ -1,0 +1,10 @@
+From this lesson, we begin to learn about String objects.
+First of all, we have a look at the attributes of String: length. Use StringObject.length to get the length of a string, like this:
+var str="dsfsdwesdfsadfwerfsdfsdfsdfsdfsdf";
+console.log(str.length
+
+solution:
+function cutIt(arr){
+ let  shortest = Math.min(...arr.map(str => str.length));
+  return arr.map(str => str.slice(0, shortest));
+}
